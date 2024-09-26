@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url("./images/background.png");
+  background-size: 100vw 110vh;
+  background-position: center;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-color: rgba(105, 222, 222, 0.5);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation ul li {
+  margin-left: 100px;
+}
+
+.navigation ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 30px;
+}
+
+.navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+.content-block {
+  display: flex;
+  color: #fff;
+}
+
+.block {
+  text-align: start;
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+
+.block h1 {
+  font-size: 100px;
+}
+
+.block p {
+  font-size: 17px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Центрирование карточек */
+  margin-top: 1rem; /* Отступ сверху */
+}
+
+.card {
+  border-radius: 10px; /* Скругление углов */
+  margin: 0 30px; /* Отступы между карточками */
+  padding: 10px; /* Внутренний отступ */
+  text-align: center; /* Центрирование текста */
+  margin-top: 5rem;
+}
+
+.card img {
+  width: 100%; /* Адаптивная ширина изображения */
+  height: auto; /* Автоматическая высота изображения */
+  border-radius: 10px; /* Скругление углов изображения */
+}
+
+.description {
+  margin-top: 10px; /* Отступ сверху для описания */
+  font-size: 14px; /* Размер шрифта для описания */
+}
+
+/* Стили для кнопок "Купить" */
+.buy-btn {
+  margin-top: 10px; /* Отступ сверху для кнопки */
+  padding: 8px 16px; /* Внутренние отступы */
+  border: none; /* Без границы */
+  width: 100px;
+  background-color: #d6ca58; /* Цвет фона кнопки */
+  color: rgb(0, 0, 0); /* Цвет текста */
+  cursor: pointer; /* Курсор при наведении */
+  font-weight: bold;
+}
+
+.btn {
+  display: flex;
+  margin-left: 10rem;
+  width: 200px;
+  padding-top: 1rem;
+  margin-top: 3rem;
+  padding-left: 5rem;
+  height: 50px;
+  border: none;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.56);
+}
+.card-title {
+  text-align: center; /* Центрирование текста */
+  font-size: 22px; /* Размер шрифта заголовка */
+  margin-top: 25rem; /* Отступ сверху */
+  color: #333; /* Цвет текста */
+  height: 5px;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #333; /* Цвет фона футера */
+  color: #fff; /* Цвет текста */
+  padding: 20px; /* Внутренний отступ */
+  text-align: center; /* Центрирование текста */
+  margin-top: 5rem;
+}
+
+.footer-content {
+  max-width: 1400px; /* Максимальная ширина содержимого футера */
+  margin: 0 auto; /* Центрирование содержимого */
+  display: flex; /* Использование Flexbox */
+  justify-content: space-between; /* Расположение элементов с равными промежутками */
+  align-items: center; /* Выравнивание по центру */
+}
+
+.footer ul {
+  list-style-type: none; /* Удаление маркеров списка */
+  padding: 0; /* Удаление отступов */
+  display: flex; /* Использование Flexbox для списка */
+  justify-content: space-around; /* Расположение элементов списка с равными промежутками */
+}
+
+.footer li {
+  margin: 0 100px; /* Отступы между элементами списка */
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    display: none;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Устанавливаем полную ширину */
+    height: 100%; /* Устанавливаем полную высоту */
+  }
+
+  body {
+    font-family: sans-serif;
+    background-image: url("./images/background.png");
+    background-size: cover; /* Изменено на cover для лучшего охвата */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(105, 222, 222, 0.5);
+    width: 100vw; /* Устанавливаем ширину на весь вьюпорт */
+    height: 100vh; /* Высота тоже на весь вьюпорт */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+  }
+  .footer {
+    background-color: #333; /* Цвет фона футера */
+    color: #fff; /* Цвет текста */
+    padding: 20px; /* Внутренний отступ */
+    text-align: center; /* Центрирование текста */
+    position: relative; /* Установим позиционирование для будущего размещения */
+    width: 550px; /* Полная ширина футера */
+  }
+
+  .footer-content {
+    max-width: 1400px; /* Максимальная ширина содержимого футера */
+    margin: 0 auto; /* Центрирование содержимого */
+    display: flex; /* Использование Flexbox */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрирование по горизонтали */
+  }
+
+  .footer ul {
+    list-style: none; /* Удаление маркеров списка */
+    padding: 0; /* Удаление отступов */
+    display: flex; /* Использование Flexbox для списка */
+    flex-direction: column; /* Вертикальное расположение элементов списка */
+    align-items: center; /* Центрирование элементов списка */
+  }
+
+  .footer li {
+    margin: 10px 0; /* Отступы между элементами списка */
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение карточек */
+    align-items: center; /* Центрирование карточек по горизонтали */
+    margin-top: 1rem; /* Отступ сверху */
+    margin-left: 10.5rem;
+  }
+
+  .card {
+    border-radius: 10px; /* Скругление углов */
+    margin: 15px 0; /* Отступы между карточками по вертикали */
+    padding: 10px; /* Внутренний отступ */
+    text-align: center; /* Центрирование текста */
+    width: 90%; /* Ширина карточки, можно изменить по желанию */
+    max-width: 300px; /* Максимальная ширина карточки */
+    margin-left: 3rem;
+  }
+
+  .card img {
+    width: 100%; /* Адаптивная ширина изображения */
+    height: auto; /* Автоматическая высота изображения */
+    border-radius: 10px; /* Скругление углов изображения */
+  }
+
+  .description {
+    margin-top: 10px; /* Отступ сверху для описания */
+    font-size: 14px; /* Размер шрифта для описания */
+    margin-left: 1rem;
+  }
+
+  /* Стили для кнопок "Купить" */
+  .buy-btn {
+    margin-top: 10px; /* Отступ сверху для кнопки */
+    padding: 8px 16px; /* Внутренние отступы */
+    border: none; /* Без границы */
+    width: 100px;
+    background-color: #d6ca58; /* Цвет фона кнопки */
+    color: rgb(0, 0, 0); /* Цвет текста */
+    cursor: pointer; /* Курсор при наведении */
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+
+  .card-title {
+    text-align: center; /* Центрирование текста */
+    font-size: 22px; /* Размер шрифта заголовка */
+    margin-top: 15rem; /* Отступ сверху */
+    color: #333; /* Цвет текста */
+    font-weight: bold;
+    margin-left: 10rem;
+    width: 250px;
+  }
+}
